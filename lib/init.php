@@ -16,5 +16,8 @@ function __autoload($class_name){
     }else{
         throw new Exception('Ошибка в подключении class'.$class_name);
     }
+}
 
+function __($key, $default_value = ''){
+    return Lang::get($key, $default_value);
 }
